@@ -1,3 +1,16 @@
+# SYCL support. 
+
+1. Port `include/rwkv/cuda/rwkv.cu` to `include/rwkv/sycl/rwkv.dp.cpp`. 
+2. Test the storygen example with rwkv.dp.cpp with following commands.
+```sh
+cd examples/storygen
+sh sycl.sh
+
+cd release
+./storygen # A model.bin file should be under converter/
+
+```
+
 # RWKV Cuda [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DUnexplored_Horizons%26type%3Dpatrons&style=flat)](https://patreon.com/Unexplored_Horizons)
 This is a super simple c++/cuda implementation of rwkv with no pytorch/libtorch dependencies.
 
